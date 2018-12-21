@@ -10,15 +10,14 @@ function dsiplayHelp {
     exit 1
 }
 
-# Nie ma 1. lub 2. argumentu
+# Sprawdzenie czy liczba argumentów jest prawidłowa
 if [[ $# -ne 2 ]]; then
     echo Nieprawidłowa liczba argumentów
     echo Spodziewane 2
     dsiplayHelp
 fi
 
-# DODO Sprawdzenie czy 2. argument jest katalogiem jeśli istnieje
-
+# Przygotowanie katalogu
 extention=$1
 destynationCatalog=$2
 
@@ -32,6 +31,7 @@ else
     fi
 fi
 
+# Kopiowanie plików
 for file in ./*.$extention
 do
     if [[ -f $file ]]; then
