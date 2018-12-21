@@ -3,10 +3,10 @@
 wd=$(pwd)
 # echo $wd
 
-[[ 5 -gt 2 || 10 -gt 0 ]] && echo Tak
-
+# Nie ma 1. lub 2. argumentu
 if [[ -z $1 || -z $2 ]]; then
     echo Nieprawidłowe argumenty
+    exit 1
 fi
 
 extention=$1
