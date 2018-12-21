@@ -2,9 +2,9 @@
 
 function dsiplayHelp {
     echo -e "\nPOMOC"
-    echo "Program kopiuje pliki o podanym rozszeżeniu z bierzącego katalogu do wskazanego podkatalogu"
+    echo "Program kopiuje pliki o podanym rozszerzeniu z bierzącego katalogu do wskazanego podkatalogu"
     echo -e "\nUŻYCIE:"
-    echo "skrypt.sh <rozszżenie> <nazwa katalogu>"
+    echo "skrypt.sh <rozszerzenie> <nazwa katalogu>"
     echo -e "\nUWAGI:"
     echo "W przypadku gdy katalog o wskazanej nazwie nie istnieje zostanie on utworzony"
     exit 1
