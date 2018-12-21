@@ -27,8 +27,6 @@ fi
 for file in ./*.$extention
 do
     if [[ -f $file ]]; then
-        echo $file
-
-        
+        cp $file $destynationCatalog/$file
     fi
 done
