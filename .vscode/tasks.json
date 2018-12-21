@@ -11,7 +11,7 @@
             },
             "type": "shell",
             "command": "sh",
-            "args": ["${file}"]
+            "args": ["${file}", "sh", "tmp"]
         }
     ]
 }
