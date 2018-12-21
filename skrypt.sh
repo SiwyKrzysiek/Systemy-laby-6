@@ -1,11 +1,13 @@
 #!/bin/bash
 
-wd=$(pwd)
-# echo $wd
+function dsiplayHelp {
+    exit 1
+}
 
 # Nie ma 1. lub 2. argumentu
-if [[ -z $1 || -z $2 ]]; then
-    echo Nieprawidłowe argumenty
+if [[ $# -ne 2 ]]; then
+    echo Nieprawidłowa liczba argumentów
+    echo Spodziewane 2
     exit 1
 fi
 
@@ -30,3 +32,5 @@ do
         cp $file $destynationCatalog/$file
     fi
 done
+
+exit
