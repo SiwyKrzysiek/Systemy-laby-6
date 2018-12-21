@@ -14,19 +14,21 @@ fi
 extention=$1
 destynationCatalog=$2
 
+if [[ ! -e $destynationCatalog ]]; then
+    # Katalog nie istnieje
+    mkdir $destynationCatalog
+else
+    if [[ ! -d $destynationCatalog ]]; then
+        echo "Istnieje już plik o nazwie wskazanej przez drugi argument!"
+        exit 1
+    fi
+fi
+
 for file in ./*.$extention
 do
     if [[ -f $file ]]; then
         echo $file
 
-        if [[ ! -e $destynationCatalog ]]; then
-            # Katalog nie istnieje
-            mkdir $destynationCatalog
-        else
-            if [[ ! -d $destynationCatalog ]]; then
-                echo "Istnieje już plik o nazwie wskazanej przez drugi argument!"
-                exit 1
-            fi
-        fi
+        
     fi
 done
