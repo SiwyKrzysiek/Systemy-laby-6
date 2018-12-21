@@ -1,6 +1,12 @@
 #!/bin/bash
 
 function dsiplayHelp {
+    echo -e "\nPOMOC"
+    echo "Program kopiuje pliki o podanym rozszeżeniu z bierzącego katalogu do wskazanego podkatalogu"
+    echo -e "\nUŻYCIE:"
+    echo "skrypt.sh <rozszżenie> <nazwa katalogu>"
+    echo -e "\nUWAGI:"
+    echo "W przypadku gdy katalog o wskazanej nazwie nie istnieje zostanie on utworzony"
     exit 1
 }
 
@@ -8,7 +14,7 @@ function dsiplayHelp {
 if [[ $# -ne 2 ]]; then
     echo Nieprawidłowa liczba argumentów
     echo Spodziewane 2
-    exit 1
+    dsiplayHelp
 fi
 
 # DODO Sprawdzenie czy 2. argument jest katalogiem jeśli istnieje
