@@ -21,6 +21,11 @@ do
 
         if [[ ! -e $destynationCatalog ]]; then
             echo "Katalog nie istnieje"
+        else
+            if [[ ! -d $destynationCatalog ]]; then
+                echo "Istnieje już plik o nazwie wskazanej przez drugi argument!"
+                exit 1
+            fi
         fi
     fi
 done
